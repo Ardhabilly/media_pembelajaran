@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- animasi AOS -->
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
+  <!-- my css -->
+  <link rel="stylesheet" href="style.css">
+  <title>LearnIndo | Quiz</title>
+  <!-- logo -->
+  <link rel="shortcut icon" href="img/logo.png">
+</head>
+<body id="home">
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-sm fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <img src="img/logoputih.png" alt="" width="30" height="24" class="d-inline-block align-text-top me-2">LearnIndo
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="index.html">Beranda</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="listmateri.html">Daftar Materi</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="quiz.html">Quiz</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- akhir navbar -->
+
+  <!-- quiz -->
+  <section class="quiz mt-5 pt-5">
+    <div class="container">
+      <div class="row text-center mb-4">
+        <div class="col" data-aos="fade-down">
+          <h2>Quiz</h2>
+          <p>Jawablah pertanyaan berikut dengan memilih jawaban yang paling tepat.</p>
+        </div>
+      </div>
+      <form onsubmit="calculateScore(event)">
+        <!-- Soal 1 -->
+        <div class="mb-4" data-aos="fade-up">
+          <label for="soal1" class="form-label">Unsur yang tidak termasuk dalam struktur intrinsik cerpen adalah...</label>
+          <div id="soal1">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal1" id="soal1a" value="a">
+              <label class="form-check-label" for="soal1a">a. Tema</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal1" id="soal1b" value="b">
+              <label class="form-check-label" for="soal1b">b. Tokoh dan Penokohan</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal1" id="soal1c" value="c">
+              <label class="form-check-label" for="soal1c">c. Alur</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal1" id="soal1d" value="d">
+              <label class="form-check-label" for="soal1d">d. Bibliografi</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soal 2 -->
+        <div class="mb-4" data-aos="fade-up">
+          <label for="soal2" class="form-label">Sudut pandang orang pertama dalam cerpen ditandai dengan penggunaan kata...</label>
+          <div id="soal2">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal2" id="soal2a" value="a">
+              <label class="form-check-label" for="soal2a">a. Ia</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal2" id="soal2b" value="b">
+              <label class="form-check-label" for="soal2b">b. Kamu</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal2" id="soal2c" value="c">
+              <label class="form-check-label" for="soal2c">c. Mereka</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal2" id="soal2d" value="d">
+              <label class="form-check-label" for="soal2d">d. Aku</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soal 3 -->
+        <div class="mb-4" data-aos="fade-up">
+          <label for="soal3" class="form-label">Bagian dari teks eksposisi yang berisi pendapat umum yang akan dijelaskan lebih lanjut adalah...</label>
+          <div id="soal3">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal3" id="soal3a" value="a">
+              <label class="form-check-label" for="soal3a">a. Tesis</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal3" id="soal3b" value="b">
+              <label class="form-check-label" for="soal3b">b. Argumentasi</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal3" id="soal3c" value="c">
+              <label class="form-check-label" for="soal3c">c. Penegasan ulang</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal3" id="soal3d" value="d">
+              <label class="form-check-label" for="soal3d">d. Kesimpulan</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soal 4 -->
+        <div class="mb-4" data-aos="fade-up">
+          <label for="soal4" class="form-label">Dalam teks eksposisi, bagian yang memuat data, fakta, atau contoh untuk mendukung tesis disebut...</label>
+          <div id="soal4">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal4" id="soal4a" value="a">
+              <label class="form-check-label" for="soal4a">a. Tesis</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal4" id="soal4b" value="b">
+              <label class="form-check-label" for="soal4b">b. Argumentasi</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal4" id="soal4c" value="c">
+              <label class="form-check-label" for="soal4c">c. Penegasan ulang</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal4" id="soal4d" value="d">
+              <label class="form-check-label" for="soal4d">d. Kesimpulan</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soal 5 -->
+        <div class="mb-4" data-aos="fade-up">
+          <label for="soal5" class="form-label">Bagian teks prosedur yang berisi urutan langkah-langkah untuk mencapai tujuan disebut...</label>
+          <div id="soal5">
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal5" id="soal5a" value="a">
+              <label class="form-check-label" for="soal5a">a. Tujuan</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal5" id="soal5b" value="b">
+              <label class="form-check-label" for="soal5b">b. Langkah-langkah</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal5" id="soal5c" value="c">
+              <label class="form-check-label" for="soal5c">c. Penutup</label>
+            </div>
+            <div class="form-check">
+              <input class="form-check-input" type="radio" name="soal5" id="soal5d" value="d">
+              <label class="form-check-label" for="soal5d">d. Pembuka</label>
+            </div>
+          </div>
+        </div>
+
+        <!-- Soal 6 -->
+        <div class="mb-4" data-aos="fade-up">
+            <label for="soal6" class="form-label">Kalimat berikut yang merupakan bagian dari teks prosedur adalah...</label>
+            <div id="soal6">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal6" id="soal6a" value="a">
+                <label class="form-check-label" for="soal6a">a. Nasi putih memiliki banyak manfaat untuk kesehatan.</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal6" id="soal6b" value="b">
+                <label class="form-check-label" for="soal6b">b. Tumis bawang merah, bawang putih, dan cabai hingga harum.</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal6" id="soal6c" value="c">
+                <label class="form-check-label" for="soal6c">c. Membaca buku setiap hari dapat meningkatkan wawasan.</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal6" id="soal6d" value="d">
+                <label class="form-check-label" for="soal6d">d. Sepotong senja yang indah untuk pacarku.</label>
+            </div>
+            </div>
+        </div>
+  
+        
+        <!-- Soal 7 -->
+        <div class="mb-4" data-aos="fade-up">
+            <label for="soal7" class="form-label">Unsur puisi yang menunjukkan pemilihan kata-kata yang digunakan dalam puisi disebut...</label>
+            <div id="soal7">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal7" id="soal7a" value="a">
+                <label class="form-check-label" for="soal7a">a. Tema</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal7" id="soal7b" value="b">
+                <label class="form-check-label" for="soal7b">b. Diksi</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal7" id="soal7c" value="c">
+                <label class="form-check-label" for="soal7c">c. Imaji</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal7" id="soal7d" value="d">
+                <label class="form-check-label" for="soal7d">d. Majas</label>
+            </div>
+            </div>
+        </div>
+  
+        
+        <!-- Soal 8 -->
+        <div class="mb-4" data-aos="fade-up">
+            <label for="soal8" class="form-label">Gaya bahasa yang menggunakan perbandingan langsung tanpa kata penghubung disebut...</label>
+            <div id="soal8">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal8" id="soal8a" value="a">
+                <label class="form-check-label" for="soal8a">a. Simile</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal8" id="soal8b" value="b">
+                <label class="form-check-label" for="soal8b">b. Metafora</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal8" id="soal8c" value="c">
+                <label class="form-check-label" for="soal8c">c. Personifikasi</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal8" id="soal8d" value="d">
+                <label class="form-check-label" for="soal8d">d. Hiperbola</label>
+            </div>
+            </div>
+        </div>
+  
+        
+        <!-- Soal 9 -->
+        <div class="mb-4" data-aos="fade-up">
+            <label for="soal9" class="form-label">Peran moderator dalam debat adalah...</label>
+            <div id="soal9">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal9" id="soal9a" value="a">
+                <label class="form-check-label" for="soal9a">a. Menyampaikan argumen tim afirmatif</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal9" id="soal9b" value="b">
+                <label class="form-check-label" for="soal9b">b. Menyampaikan argumen tim negatif</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal9" id="soal9c" value="c">
+                <label class="form-check-label" for="soal9c">c. Menyampaikan kesimpulan akhir</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal9" id="soal9d" value="d">
+                <label class="form-check-label" for="soal9d">d. Mengatur jalannya debat dan menyampaikan peraturan</label>
+            </div>
+            </div>
+        </div>
+  
+        
+        <!-- Soal 10 -->
+        <div class="mb-4" data-aos="fade-up">
+            <label for="soal10" class="form-label">Sesi dalam debat di mana kedua tim saling mengajukan pertanyaan dan menjawab disebut...</label>
+            <div id="soal10">
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal10" id="soal10a" value="a">
+                <label class="form-check-label" for="soal10a">a. Pembukaan</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal10" id="soal10b" value="b">
+                <label class="form-check-label" for="soal10b">b. Penyampaian Argumen</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal10" id="soal10c" value="c">
+                <label class="form-check-label" for="soal10c">c. Sesi Tanya Jawab</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="soal10" id="soal10d" value="d">
+                <label class="form-check-label" for="soal10d">d. Penutup</label>
+            </div>
+            </div>
+        </div>
+  
+  
+
+        <!-- Tombol submit -->
+        <div class="d-grid gap-2">
+          <button class="btn btn-primary" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+  <!-- akhir quiz -->
+
+  <!-- footer -->
+  <footer class="bg-primary text-white text-center py-3 mt-4">
+    <p class="mb-0">Created with ❤️ by LearnIndo Team</p>
+  </footer>
+  <!-- akhir footer -->
+
+  <!-- JavaScript -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXlXr2pJW3t5QQ6oNH2K5G9hbEGWlK6UWc9rIJ0AN9GI0B2H5p5L1vg6WBRY" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhG81rG+m3wRU7y9LF0C2U5zZ9QpeH+k8tZLEmYlB6d2e5kF6tKTgG9vfX" crossorigin="anonymous"></script>
+  <!-- animasi AOS -->
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    // Function to calculate the score
+    function calculateScore(event) {
+      event.preventDefault();
+      let score = 0;
+      const answers = {
+        soal1: 'd',
+        soal2: 'd',
+        soal3: 'a',
+        soal4: 'b',
+        soal5: 'c',
+        soal6: 'b',
+        soal7: 'b',
+        soal8: 'b',
+        soal9: 'd',
+        soal10: 'c'
+      };
+      for (let key in answers) {
+        const radios = document.getElementsByName(key);
+        for (let radio of radios) {
+          if (radio.checked && radio.value === answers[key]) {
+            score += 10;
+          }
+        }
+      }
+      alert(`Skor Anda: ${score}`);
+    }
+  </script>
+</body>
+</html>
